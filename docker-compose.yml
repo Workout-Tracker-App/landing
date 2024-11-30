@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "4321:4321"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      # mount local source into container
+      - "./:/app"
+      # paths below are ephemeral volumes
+      - "/app/.tscache"
+      - "/app/dist"
+      - "/app/node_modules"
