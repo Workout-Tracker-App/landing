@@ -1,0 +1,83 @@
+---
+interface Logo {
+  width: number;
+  height: number;
+}
+
+const { width, height } = Astro.props;
+---
+
+<svg
+  {...Astro.props}
+  width={width}
+  height={height}
+  viewBox="0 0 1024 1024"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 256C0 114.615 114.615 0 256 0H768C909.385 0 1024 114.615 1024 256V768C1024 909.385 909.385 1024 768 1024H256C114.615 1024 0 909.385 0 768V256Z"
+    fill="black"></path>
+  <path
+    d="M510.524 176.686C516.772 170.438 526.903 170.438 533.151 176.686L864.077 507.612C870.326 513.861 870.326 523.991 864.077 530.24L815.994 578.323C809.746 584.571 799.615 584.571 793.367 578.323L462.441 247.397C456.192 241.149 456.192 231.018 462.441 224.77L510.524 176.686Z"
+    fill="url(#paint0_linear_25_148)"></path>
+  <path
+    d="M738.212 217.698C747.585 208.326 762.781 208.326 772.153 217.698L823.065 268.61C832.438 277.983 832.438 293.179 823.065 302.551L769.325 356.291L684.472 271.439L738.212 217.698Z"
+    fill="url(#paint1_linear_25_148)"></path>
+  <path
+    d="M458.198 497.713L543.051 582.566L309.616 815.845L140 815.911L458.198 497.713Z"
+    fill="url(#paint2_linear_25_148)"></path>
+  <path
+    d="M358.496 222.648C364.744 216.4 374.875 216.4 381.123 222.648L818.115 659.64C824.364 665.889 824.364 676.019 818.115 682.268L770.032 730.351C763.784 736.599 753.653 736.599 747.405 730.351L310.413 293.359C304.164 287.111 304.164 276.98 310.413 270.731L358.496 222.648Z"
+    fill="url(#paint3_linear_25_148)"></path>
+  <defs>
+    <linearGradient
+      id="paint0_linear_25_148"
+      x1="868.616"
+      y1="172.345"
+      x2="228.616"
+      y2="816.345"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#EBAC2D"></stop>
+      <stop offset="0.405" stop-color="#EB7C2D"></stop>
+      <stop offset="1" stop-color="#C84503"></stop>
+    </linearGradient>
+    <linearGradient
+      id="paint1_linear_25_148"
+      x1="868.616"
+      y1="172.345"
+      x2="228.616"
+      y2="816.345"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#EBAC2D"></stop>
+      <stop offset="0.405" stop-color="#EB7C2D"></stop>
+      <stop offset="1" stop-color="#C84503"></stop>
+    </linearGradient>
+    <linearGradient
+      id="paint2_linear_25_148"
+      x1="868.616"
+      y1="172.345"
+      x2="228.616"
+      y2="816.345"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#EBAC2D"></stop>
+      <stop offset="0.405" stop-color="#EB7C2D"></stop>
+      <stop offset="1" stop-color="#C84503"></stop>
+    </linearGradient>
+    <linearGradient
+      id="paint3_linear_25_148"
+      x1="868.616"
+      y1="172.345"
+      x2="228.616"
+      y2="816.345"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#EBAC2D"></stop>
+      <stop offset="0.405" stop-color="#EB7C2D"></stop>
+      <stop offset="1" stop-color="#C84503"></stop>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 
-interface LayoutProps {
+interface Layout {
   title: string;
   description: string;
 }
@@ -17,17 +17,32 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-main">
     <Header />
     <slot />
   </body>
 </html>
 
-<style>
+<style is:global>
   html,
   body {
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  #header-nav {
+    background: transparent;
+    backdrop-filter: blur(5px);
+  }
+
+  @keyframes blur {
+    to {
+      box-shadow:
+        0 5px 50px -5px hsla(0, 94%, 45%, 0.575),
+        0 0 0 1px hsla(0, 86%, 41%, 0.315);
+      background-color: rgba(221, 31, 31, 0.671);
+      backdrop-filter: blur(10px);
+    }
   }
 </style>
