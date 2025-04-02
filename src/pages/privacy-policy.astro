@@ -1,0 +1,33 @@
+---
+import PrivacyTitle from "../components/privacy-policy/PrivacyTitle.astro";
+import PrivacySection from "../components/privacy-policy/PrivacySection.astro";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de privacidad</title>
+  </head>
+  <body class="bg-main text-white">
+    <section class="privacy-policy-container px-6 py-8">
+      <!-- Privacy Policy Title -->
+      <PrivacyTitle title="Política de privacidad" />
+
+      <!-- Privacy Policy Sections -->
+      <PrivacySection 
+        sectionTitle="1. INTRODUCCIÓN" 
+        content="TEXT" 
+      />
+
+      <PrivacySection 
+        sectionTitle="2. RESPONSABLE DEL TRATAMIENTO" 
+        content="TEXT" 
+      />
+
+      <!-- Add more sections as needed -->
+      <!-- You can repeat the PrivacySection component for other sections of the policy -->
+    </section>
+  </body>
+</html>
