@@ -16,21 +16,26 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
     <title>{title}</title>
   </head>
   <body class="bg-main">
     <section class="hero-section-2">
+      <!-- Header with padding or margin to ensure it doesn't overlap with content -->
       <Header />
-      <slot />
+
+      <!-- Content goes here, the space below the header is automatically handled -->
+      <div class="content-wrapper mt-16">
+        <slot />
+      </div>
     </section>
     
-    <section class= "info-section">
-
-    </section>
-        <!-- Footer Section -->
-        <Footer /> <!-- Add Footer here -->
+    <!-- Footer Section -->
+    <Footer /> <!-- Add Footer here -->
   </body>
 </html>
+
 
 <style is:global>
   html,
@@ -55,7 +60,7 @@ const { title, description } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: right;
+    text-align: left;
     color: white;
   }
 

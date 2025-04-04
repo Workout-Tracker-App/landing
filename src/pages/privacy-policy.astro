@@ -1,33 +1,29 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import PrivacyTitle from "../components/privacy-policy/PrivacyTitle.astro";
 import PrivacySection from "../components/privacy-policy/PrivacySection.astro";
+import translations from "../data/privacy/en.json"; // dynamically swap this based on language
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Política de privacidad</title>
-  </head>
+<Layout title="Postfit - Track, share and analyze your trainings">
   <body class="bg-main text-white">
     <section class="privacy-policy-container px-6 py-8">
       <!-- Privacy Policy Title -->
       <PrivacyTitle title="Política de privacidad" />
 
       <!-- Privacy Policy Sections -->
-      <PrivacySection 
-        sectionTitle="1. INTRODUCCIÓN" 
-        content="TEXT" 
+      <PrivacySection
+        sectionTitle={translations.introductionTitle}
+        content={translations.introduction}
       />
 
-      <PrivacySection 
-        sectionTitle="2. RESPONSABLE DEL TRATAMIENTO" 
-        content="TEXT" 
+      <PrivacySection
+        sectionTitle={translations.usageDataTitle}
+        content={translations.usageDataContent}
       />
 
       <!-- Add more sections as needed -->
       <!-- You can repeat the PrivacySection component for other sections of the policy -->
     </section>
   </body>
-</html>
+</Layout>

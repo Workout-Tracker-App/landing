@@ -1,9 +1,16 @@
 ---
 // PrivacySection.astro
 const { sectionTitle, content } = Astro.props;
+
+// Split content into paragraphs by double line breaks
+const paragraphs = content.split('\n\n');
 ---
 
 <section class="mt-6">
   <h2 class="text-3xl font-semibold text-white">{sectionTitle}</h2>
-  <p class="mt-4 text-lg text-white/80">{content}</p>
+  <div class="mt-4 space-y-4">
+    {paragraphs.map((paragraph: unknown) => (
+      <p class="text-lg text-white/80">{paragraph}</p>
+    ))}
+  </div>
 </section>
