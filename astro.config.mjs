@@ -6,16 +6,17 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  base: "/landing/",
   integrations: [tailwind()],
   i18n: {
     locales: ["es", "en"],
     defaultLocale: "en",
     fallback: {
-      es: "en"
+      es: "en",
     },
     routing: {
       prefixDefaultLocale: false,
-      fallbackType: "rewrite"
-    }
-  }
+      fallbackType: "rewrite",
+    },
+  },
 });
