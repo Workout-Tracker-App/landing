@@ -10,15 +10,47 @@ interface Layout {
 const { title, description } = Astro.props;
 ---
 
-<!doctype html>
+--- // This is your Astro component layout file (e.g., Layout.astro) ---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-
     <title>{title}</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: #111114;
+      }
+
+      .hero-section-2 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0; /* Ensures no extra space at the bottom */
+      }
+
+      .content-wrapper {
+        flex-grow: 1; /* Fills the remaining space */
+        margin-top: 4rem; /* Adjust this margin to control the space below header */
+      }
+
+      footer {
+        max-height: 200px; /* Set the maximum height of the footer */
+        overflow: hidden; /* Hide content if it exceeds max-height */
+        padding: 20px;
+        background-color: #25262b;
+      }
+    </style>
   </head>
   <body class="bg-main">
     <section class="hero-section-2">
@@ -30,12 +62,12 @@ const { title, description } = Astro.props;
         <slot />
       </div>
     </section>
-    
+
     <!-- Footer Section -->
-    <Footer /> <!-- Add Footer here -->
+    <Footer />
+    <!-- Add Footer here -->
   </body>
 </html>
-
 
 <style is:global>
   html,

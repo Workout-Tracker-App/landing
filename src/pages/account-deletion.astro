@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PrivacyTitle from "../components/privacy-policy/PrivacyTitle.astro";
+import PrivacySection from "../components/privacy-policy/PrivacySection.astro";
+import translations from "../data/account-deletion/en.json"; // dynamically swap this based on language
+---
+
+<Layout title="Postfit - Track, share and analyze your trainings">
+  <body class="bg-main text-white">
+    <section class="privacy-policy-container px-6 py-8 max-w-4xl">
+      <!-- App Name -->
+      <div class="text-center mb-2">
+        <p class="text-md text-gray-400 uppercase">Postfit</p>
+      </div>
+
+      <!-- Privacy Policy Title -->
+      <div class="text-center mb-6">
+        <PrivacyTitle title={translations.accountDeletionTitle} />
+      </div>
+
+      <!-- Privacy Policy Sections -->
+      <PrivacySection
+        sectionTitle=""
+        content={translations.accountDeletionContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.whatWillBeDeletedTitle}
+        content={translations.whatWillBeDeletedContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.howToDeleteTitle}
+        content={translations.howToDeleteContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.importantTitle}
+        content={translations.importantContent}
+      />
+      <PrivacySection content={translations.contactTitle} />
+
+      <!-- Add more sections as needed -->
+      <!-- You can repeat the PrivacySection component for other sections of the policy -->
+    </section>
+  </body>
+</Layout>
