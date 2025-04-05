@@ -10,14 +10,10 @@ interface Layout {
 const { title, description } = Astro.props;
 ---
 
---- // This is your Astro component layout file (e.g., Layout.astro) ---
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
     <style>
       html,
