@@ -7,19 +7,65 @@ import translations from "../data/privacy/en.json"; // dynamically swap this bas
 
 <Layout title="Postfit - Track, share and analyze your trainings">
   <body class="bg-main text-white">
-    <section class="privacy-policy-container px-6 py-8">
+    <section class="privacy-policy-container px-6 py-8 max-w-4xl">
+      <!-- App Name -->
+      <div class="text-center mb-2">
+        <p class="text-md text-gray-400 uppercase">Postfit</p>
+      </div>
+
       <!-- Privacy Policy Title -->
-      <PrivacyTitle title="Política de privacidad" />
+      <div class="text-center mb-6">
+        <PrivacyTitle title="Política de privacidad" />
+      </div>
 
       <!-- Privacy Policy Sections -->
       <PrivacySection
         sectionTitle={translations.introductionTitle}
         content={translations.introduction}
       />
-
       <PrivacySection
         sectionTitle={translations.usageDataTitle}
         content={translations.usageDataContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.thirdPartyTitle}
+        content={translations.thirdPartyContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.useOfPersonalDataTitle}
+        content={translations.useOfPersonalDataContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.dataRetentionTitle}
+        content={translations.dataRetentionContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.dataTransferTitle}
+        content={translations.dataTransferContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.deleteDataTitle}
+        content={translations.deleteDataContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.disclosureDataTitle}
+        content={translations.disclosureDataContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.childrenPrivacyTitle}
+        content={translations.childrenPrivacyContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.linksToOtherWebsitesTitle}
+        content={translations.linksToOtherWebsitesContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.changesToPrivacyPolicyTitle}
+        content={translations.changesToPrivacyPolicyContent}
+      />
+      <PrivacySection
+        sectionTitle={translations.contactUsTitle}
+        content={translations.contactUsContent}
       />
 
       <!-- Add more sections as needed -->
