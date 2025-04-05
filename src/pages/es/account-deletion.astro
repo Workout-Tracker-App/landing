@@ -1,18 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import PrivacyTitle from "../components/privacy-policy/PrivacyTitle.astro";
-import PrivacySection from "../components/privacy-policy/PrivacySection.astro";
-import translations from "../data/account-deletion/en.json"; // dynamically swap this based on language
-
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from "../i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
+import Layout from "../../layouts/Layout.astro";
+import PrivacyTitle from "../../components/privacy-policy/PrivacyTitle.astro";
+import PrivacySection from "../../components/privacy-policy/PrivacySection.astro";
+import translations from "../../data/account-deletion/es.json"; // dynamically swap this based on language
 ---
 
 <Layout title="Postfit - Track, share and analyze your trainings">
