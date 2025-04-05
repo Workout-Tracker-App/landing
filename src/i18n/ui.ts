@@ -9,9 +9,12 @@ export const showDefaultLang = false;
 
 export const ui = {
     en: {
-        'nav.privacyPolicy': 'Privacy Policy',
+        'nav.privacyPolicy': 'Privacy policy',
+        'nav.deleteAccount': 'Delete account'
     },
     es: {
         'nav.privacyPolicy': 'Politica de privacidad',
+        'nav.deleteAccount': 'Borrar cuenta'
+
     },
 } as const;

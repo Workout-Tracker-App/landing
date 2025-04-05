@@ -5,6 +5,7 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const privacyURL = getRelativeLocaleUrl(lang, "privacy-policy");
+const accountDeletionURL = getRelativeLocaleUrl(lang, "account-deletion");
 ---
 
 <footer class="bg-dark text-white py-4">
@@ -30,9 +31,9 @@ const privacyURL = getRelativeLocaleUrl(lang, "privacy-policy");
         >{t("nav.privacyPolicy")}</a
       >
       <a
-        href="/account-deletion"
+        href={accountDeletionURL}
         class="text-white hover:text-[#DD671D] transition-colors"
-        >Delete account</a
+        >{t("nav.deleteAccount")}</a
       >
     </div>
 
