@@ -1,0 +1,57 @@
+---
+import PrivacySection from "../components/privacy-policy/PrivacySection.astro";
+import PrivacyTitle from "../components/privacy-policy/PrivacyTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import translations from "../data/terms-of-use/en.json"; // dynamically swap this based on language
+---
+
+<Layout title="Postfit - Track, share and analyze your trainings">
+    <body class="bg-main text-white">
+        <section class="privacy-policy-container px-6 py-8 max-w-4xl">
+            <!-- App Name -->
+            <div class="text-center mb-2">
+                <p class="text-md text-gray-400 uppercase">Postfit</p>
+            </div>
+
+            <!-- Privacy Policy Title -->
+            <div class="text-center mb-6">
+                <PrivacyTitle title={translations.termsOfUse} />
+            </div>
+
+            <!-- Privacy Policy Sections -->
+            <PrivacySection content={translations.termsOfUseContent} />
+
+            <PrivacySection
+                sectionTitle={translations.usageTitle}
+                content={translations.usageContent}
+            />
+            <PrivacySection
+                sectionTitle={translations.userGeneratedTitle}
+                content={translations.userGeneratedContent}
+            />
+            <PrivacySection
+                sectionTitle={translations.accountSuspensionTitle}
+                content={translations.accountSuspensionContent}
+            />
+            <PrivacySection
+                sectionTitle={translations.reportingTitle}
+                content={translations.reportingContent}
+            />
+            <PrivacySection
+                sectionTitle={translations.privacyTitle}
+                content={translations.privacyContent}
+            />
+            <PrivacySection
+                sectionTitle={translations.changeOfTermsTitle}
+                content={translations.changeOfTermsContent}
+            />
+            <PrivacySection
+                sectionTitle={translations.contactUsTitle}
+                content={translations.contactUsContent}
+            />
+
+            <!-- Add more sections as needed -->
+            <!-- You can repeat the PrivacySection component for other sections of the policy -->
+        </section>
+    </body>
+</Layout>
